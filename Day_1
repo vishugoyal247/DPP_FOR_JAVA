@@ -1,0 +1,219 @@
+1. Write a Java program to print 'Hello' on screen and then print particular string on a separate line. 
+Expected Output :
+Hello
+DDP FOR JAVA
+
+
+
+public class HelloWorld{
+    public static void main(String []args)
+    {
+        System.out.println("Hello\nDPP FOR JAVA");
+    }
+}
+
+
+2. Write a Java program to print the sum of two numbers.
+Test Data:
+74 + 36
+Expected Output :
+110
+
+
+
+public class HelloWorld{
+    public static void main(String []args)
+    {
+        int a = 74, b = 36;
+        System.out.println(a+b);
+    }
+}
+
+3. Write a Java program to divide two numbers and print on the screen.
+Test Data :
+50/3
+Expected Output :
+16
+
+
+
+public class HelloWorld{
+    public static void main(String []args)
+    {
+        int a = 50, b = 3;
+        System.out.println(a/b);
+        
+    }
+}
+
+4. Write a Java program to print the result of the following operations. 
+Test Data:
+a. -5 + 8 * 6
+b. (55+9) % 9
+c. 20 + -3*5 / 8
+d. 5 + 15 / 3 * 2 - 8 % 3
+Expected Output :
+43
+1
+19
+13
+
+
+
+
+public class HelloWorld{
+    public static void main(String []args)
+    {
+        
+        System.out.println(-5 + 8 * 6);
+        System.out.println((55+9) % 9);
+        System.out.println(20 + -3*5 / 8);
+        System.out.println(5 + 15 / 3 * 2 - 8 % 3);
+        
+    }
+}
+
+5. Write a Java program that takes two numbers as input and display the product of two numbers.
+Test Data:
+Input first number: 25
+Input second number: 5
+Expected Output :
+25 x 5 = 125
+
+
+import java.util.Scanner;
+
+public class HelloWorld{
+    public static void main(String []args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        System.out.println(a*b);
+        
+    }
+}
+
+6. Write a Java program to print the sum (addition), multiply, subtract, divide and remainder of two numbers.
+Test Data:
+Input first number: 125
+Input second number: 24
+Expected Output :
+125 + 24 = 149
+125 - 24 = 101
+125 x 24 = 3000
+125 / 24 = 5
+125 mod 24 = 5
+
+
+
+
+import java.util.Scanner;
+
+public class HelloWorld{
+    public static void main(String []args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        System.out.println(a+b);
+        System.out.println(a-b);
+        System.out.println(a*b);
+        System.out.println(a/b);
+        System.out.println(a%b);
+    }
+}
+
+
+
+7. Write a Java program that takes a number as input and prints its multiplication table upto 10. 
+Input a number: 8
+Expected Output :
+8 x 1 = 8
+8 x 2 = 16
+8 x 3 = 24
+...
+8 x 10 = 80
+
+
+
+import java.util.Scanner;
+
+public class HelloWorld{
+    public static void main(String []args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the no. of the table to be printed");
+        int n = sc.nextInt();
+        for(int i=1; i<11; i++)
+        {
+            System.out.println(n+" * "+i+" = "+i*n);
+        }
+    }
+}
+
+
+8. Write a Java program to display the following pattern.
+
+*
+**
+***
+****
+*****
+
+
+
+
+public class HelloWorld{
+    public static void main(String []args)
+    {
+        for(int i=1; i<6; i++)
+        {
+            for(int j=0; j<i; j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        
+    }
+    
+}
+
+9. Write a Java program to print the area and perimeter of a circle. 
+Test Data:z
+Radius = 7.5
+Expected Output
+Perimeter is = 47.12388980384689
+Area is = 176.71458676442586
+
+
+
+
+import java.util.Scanner;
+public class HelloWorld{
+    public static void main(String []args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the radius of the circle");
+        float r = sc.nextFloat();
+        System.out.println("Perimeter is ="+ 2 * 3.14 * r);
+        System.out.println("Area is ="+ 3.14 * r *r);
+    }
+}
+
+10. Write a Java program that takes three numbers as input to calculate and print the average of the numbers.
+
+
+
+import java.util.Scanner;
+public class HelloWorld{
+    public static void main(String []args)
+    {
+        Scanner sc = new Scanner(System.in);
+        float a = sc.nextFloat();
+        float b = sc.nextFloat();
+        float c = sc.nextFloat();
+        System.out.println("The average of these number is "+ (a+b+c)/3);
+    }
+}
