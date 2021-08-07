@@ -1,0 +1,321 @@
+‼️ DAY 2 ‼️
+
+
+In this file few solution is copy somewhere so be careful to use in the starting level.....
+
+
+11. Write a Java program to print the area and perimeter of a rectangle.
+Width = 5.5 Height = 8.5
+Expected Output
+Area is 5.6 * 8.5 = 47.60
+Perimeter is 2 * (5.6 + 8.5) = 28.20
+
+import java.util.Scanner;
+public class HelloWorld{
+    public static void main(String[]  args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        System.out.println("The area is : "+ a*b);
+        System.out.println("The perimeter is : "+ 2*(a+b));
+        
+    }
+}
+
+
+
+12. Write a Java program to print a pattern on the screen
+Expected Output
+
+*****
+ ****
+  ***
+   **
+    *
+
+
+public class HelloWorld{
+    public static void main(String[]  args)
+    {
+        for(int i=1; i<=5; i++)
+        {
+            for(int j=1; j<i; j++)
+            {
+                System.out.print(" ");
+            }
+            for(int k=5; k>=i; k--)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+            
+        }
+        
+    }
+}
+
+
+13. Write a Java program to swap two variables.
+
+import java.util.Scanner;
+public class HelloWorld{
+    public static void main(String[]  args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int t;
+        t = a;
+        a = b;
+        b = t;
+        System.out.println("The reversed numbers is : "+ a +" "+ b );
+        
+    }
+}
+
+14. Write a Java program to add two binary numbers. 
+Input Data:
+Input first binary number: 10
+Input second binary number: 11
+
+Expected Output
+Sum of two binary numbers: 101
+
+Do Yourself
+
+15. Write a Java program to multiply two binary numbers. 
+Input Data:
+Input the first binary number: 10
+Input the second binary number: 11
+
+Expected Output
+Product of two binary numbers: 110 
+
+Do yourself
+
+16. Write a Java program to convert a decimal number to binary number. 
+Input Data:
+Input a Decimal Number : 5
+
+Expected Output
+Binary number is: 101 
+
+public static void main(String args[])
+    {
+        int dec_num, quot, i=1, j;
+        int bin_num[] = new int[100];
+        Scanner scan = new Scanner(System.in);
+		
+        System.out.print("Input a Decimal Number : ");
+        dec_num = scan.nextInt();
+		
+        quot = dec_num;
+		
+        while(quot != 0)
+        {
+            bin_num[i++] = quot%2;
+            quot = quot/2;
+        }
+		
+        System.out.print("Binary number is: ");
+        for(j=i-1; j>0; j--)
+        {
+            System.out.print(bin_num[j]);
+        }
+        System.out.print("\n");
+    }
+
+16. Write a Java program to convert a decimal number to hexadecimal number. 
+Input Data:
+Input a decimal number: 15
+
+Expected Output
+Hexadecimal number is : F 
+
+import java.util.Scanner;
+public class HelloWorld {
+      public static void main(String args[])
+    {
+        int dec_num, rem;
+        String hexdec_num="";
+        
+        /* hexadecimal number digits */
+        
+        char hex[]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
+        
+        Scanner in = new Scanner(System.in);
+		
+        System.out.print("Input a decimal number: ");
+        dec_num = in.nextInt();
+		
+        while(dec_num>0)
+        {
+            rem = dec_num%16;
+            hexdec_num = hex[rem] + hexdec_num;
+            dec_num = dec_num/16;
+        }
+        System.out.print("Hexadecimal number is : "+hexdec_num+"\n");         
+    }
+}
+
+17. Write a Java program to convert a decimal number to octal number. 
+Input Data:
+Input a Decimal Number: 15
+
+Expected Output
+Octal number is: 17  
+
+import java.util.Scanner;
+public class HelloWorld {
+      public static void main(String args[])
+    {
+                int dec_num, rem, quot, i=1, j;
+        	int oct_num[] = new int[100];
+        	Scanner scan = new Scanner(System.in);
+		
+        	System.out.print("Input a Decimal Number: ");
+        	dec_num = scan.nextInt();
+		
+        	quot = dec_num;
+		
+        	while(quot != 0)
+        	{
+        	    oct_num[i++] = quot%8;
+        	    quot = quot/8;
+        	}
+		
+        	System.out.print("Octal number is: ");
+       		for(j=i-1; j>0; j--)
+        	{
+        	    System.out.print(oct_num[j]);
+        	}
+		System.out.print("\n");
+    	}
+}
+
+18. Write a Java program to convert a binary number to decimal number.
+Input Data:
+Input a binary number: 100
+
+Expected Output
+Decimal Number: 4 
+
+import java.util.Scanner;
+public class HelloWorld {
+ public static void main(String[] args) 
+ {
+  Scanner sc = new Scanner(System.in);
+  long binaryNumber, decimalNumber = 0, j = 1, remainder;
+  System.out.print("Input a binary number: ");
+  binaryNumber = sc.nextLong();
+
+  while (binaryNumber != 0) 
+  {
+   remainder = binaryNumber % 10;
+   decimalNumber = decimalNumber + remainder * j;
+   j = j * 2;
+   binaryNumber = binaryNumber / 10;
+  }
+  System.out.println("Decimal Number: " + decimalNumber);
+ }
+}
+
+19. Write a Java program to convert a binary number to hexadecimal number. 
+Input Data:
+Input a Binary Number: 1101
+
+Expected Output
+HexaDecimal value: D
+
+import java.util.Scanner;
+public class HelloWorld {
+ public static void main(String[] args) 
+ {
+  int[] hex = new int[1000];
+  int i = 1, j = 0, rem, dec = 0, bin;
+  Scanner in = new Scanner(System.in);
+  System.out.print("Input a Binary Number: ");
+  bin = in.nextInt();
+  while (bin > 0) {
+   rem = bin % 2;
+   dec = dec + rem * i;
+   i = i * 2;
+   bin = bin / 10;
+  }
+   i = 0;
+  while (dec != 0) {
+   hex[i] = dec % 16;
+   dec = dec / 16;
+   i++;
+  }
+  System.out.print("HexaDecimal value: ");
+  for (j = i - 1; j >= 0; j--)
+  {
+   if (hex[j] > 9) 
+   {
+    System.out.print((char)(hex[j] + 55)+"\n");
+   } else
+   {
+    System.out.print(hex[j]+"\n");
+   }
+  }
+ }
+}
+
+20. Write a Java program to convert a binary number to a Octal number.
+Input Data:
+Input a Binary Number: 111
+
+Expected Output
+Octal number: 7
+
+
+import java.util.*;
+public class HelloWorld {
+public static void main(String[] args) 
+    {
+        int binnum, binnum1,rem, decnum=0, quot, i=1, j;
+        int octnum[] = new int[100];
+        Scanner scan = new Scanner(System.in);
+		System.out.print("Input a Binary Number : ");
+        binnum = scan.nextInt();
+        binnum1=binnum;
+     
+      while(binnum > 0)
+        {
+            rem = binnum % 10;
+            decnum = decnum + rem*i;
+            //System.out.println(rem);
+            i = i*2;
+            binnum = binnum/10;
+        }   
+
+		i=1;
+        quot = decnum;
+		
+        while(quot > 0)
+        {
+            octnum[i++] = quot % 8;
+            quot = quot / 8;
+        }
+		
+        System.out.print("Equivalent Octal Value of " +binnum1+ " is :");
+        for(j=i-1; j>0; j--)
+        {
+            System.out.print(octnum[j]);
+        }
+ System.out.print("\n");
+ 
+    }
+}
+
+
+
+
+
+
+
+
+
+
