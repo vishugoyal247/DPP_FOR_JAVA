@@ -1,0 +1,285 @@
+|| Day 3 ||
+
+21. Write a Java program to compare two numbers. 
+
+Input Data:
+Input first integer: 25
+Input second integer: 39
+Expected Output
+25 != 39                                                                          
+25 < 39                                                                           
+25 <= 39
+
+import java.util.Scanner;
+public class HelloWorld{
+
+     public static void main(String []args)
+     {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        if (a>b)
+        {
+            System.out.println(a+" > "+b);
+        }
+        else if (a<b)
+        {
+            System.out.println(a+" < "+b);
+        }
+        else
+        {
+            System.out.println(a+" = "+b);
+        }
+     }
+}
+
+
+22. Write a Java program and compute the sum of the digits of an integer
+
+Input Data:
+Input an integer: 25
+Expected Output
+The sum of the digits is: 7
+
+
+import java.util.Scanner;
+public class HelloWorld{
+
+     public static void main(String []args)
+     {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        System.out.print("The sum of the digits is : "+(a+b));
+     }
+}
+
+
+
+
+
+23. Write a Java program to compute the area of a hexagon. 
+Area of a hexagon = (6 * s^2)/(4*tan(π/6))
+where s is the length of a side
+
+Input Data:
+Input the length of a side of the hexagon: 6
+Expected Output
+The area of the hexagon is: 93.53074360871938
+
+
+
+
+import java.util.Scanner;
+public class HelloWorld{
+
+     public static void main(String []args)
+     {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the length of a side of the hexagon: ");
+        int s = sc.nextInt();
+        System.out.println("The area of the hexagon is :"+(6 * s*s)/(4*0.57699640038));
+     }
+}
+
+
+24. Write a Java program to compute the area of a polygon. 
+Area of a polygon = (n*s^2)/(4*tan(π/n))
+where n is n-sided polygon and s is the length of a side
+
+Input Data:
+Input the number of sides on the polygon: 7
+Input the length of one of the sides: 6
+Expected Output
+The area is: 130.82084798405722
+
+
+import java.util.Scanner;
+public class HelloWorld{
+
+     public static void main(String []args)
+     {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the length of a side of the polygon: ");
+        int s = sc.nextInt();
+        System.out.println("Enter the no. of the side of the polygon: ");
+        int n = sc.nextInt();
+        System.out.println("The area of the hexagon is :"+(n * s*s)/(4*0.57699640038));
+     }
+}
+
+
+
+25. Write a Java program to compute the distance between two points on the surface of earth.
+Distance between the two points [ (x1,y1) & (x2,y2)]
+d = radius * arccos(sin(x1) * sin(x2) + cos(x1) * cos(x2) * cos(y1 - y2))
+Radius of the earth r = 6371.01 Kilometers
+
+Input Data:
+Input the latitude of coordinate 1: 25
+Input the longitude of coordinate 1: 35
+Input the latitude of coordinate 2: 35.5
+Input the longitude of coordinate 2: 25.5
+Expected Output
+The distance between those points is: 1480.0848451069087 km 
+
+import java.lang.Math;
+import java.util.Scanner;
+public class HelloWorld{
+
+     public static void main(String []args)
+     {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter x1: ");
+        int x1 = sc.nextInt();
+        System.out.println("Enter y1: ");
+        int y1 = sc.nextInt();
+        System.out.println("Enter x2: ");
+        int x2 = sc.nextInt();
+        System.out.println("Enter y2: ");
+        int y2 = sc.nextInt();
+        
+        System.out.println("The distance between the points is :"+Math.pow(((x2-x1)(x2-x1))+((y2-y1)(y2-y1)),0.5));
+     }
+}
+
+
+
+26. Write a Java program to reverse a string. 
+
+Input Data:
+Input a string: The quick brown fox
+Expected Output
+Reverse string: xof nworb kciuq ehT
+
+
+
+
+
+import java.util.Scanner;
+public class HelloWorld{
+
+     public static void main(String []args)
+     {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter String : ");
+        char[] s = sc.nextLine().toCharArray();
+        for(int i=s.length-1 ; i>=0 ; i--)
+        {
+            System.out.print(s[i]);
+        }
+        
+     }
+}
+
+
+27. Write a Java program to count the letters, spaces, numbers and other characters of an input string. 
+
+Expected Output
+The string is :  Aa kiu, I swd skieo 236587. GH kiu: sieo?? 25.33
+letter: 23                                               
+space: 9                                                 
+number: 10                                               
+other: 6
+
+
+
+import java.util.Scanner;
+public class HelloWorld{
+
+     public static void main(String []args)
+     {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter String : ");
+        char[] s = sc.nextLine().toCharArray();
+        int letter=0, space=0, number=0, other=0;
+        for(int i=s.length-1 ; i>=0 ; i--)
+        {
+            if(Character.isLetter(s[i])){
+				letter ++ ;
+			}
+			else if(Character.isDigit(s[i])){
+				number ++ ;
+			}
+			else if(Character.isSpaceChar(s[i])){
+				space ++ ;
+			}
+			else{
+				other ++;
+			}
+        }
+		System.out.println("letter: " + letter);
+		System.out.println("space: " + space);
+		System.out.println("number: " + number);
+		System.out.println("other: " + other);
+        
+     }
+}
+
+
+
+28. Write a Java program to create and display unique three-digit number using 1, 2, 3, 4. Also count how many three-digit numbers are there. 
+
+Expected Output
+123                                                      
+124                                                      
+...                                                                                              
+431                                                      
+432                                                      
+Total number of the three-digit-number is 24
+
+
+
+public class HelloWorld{
+    public static void main(String[] args) {
+		int total = 0;
+		for(int i = 1; i <= 4; i++){
+			for(int j = 1; j <= 4; j++){
+				for(int k = 1; k <= 4; k++){
+					if(k != i && k != j && i != j){
+						total++;
+						System.out.println(i + "" + j + "" + k);
+					}
+				}
+			}
+		}
+		System.out.println("Total number of the three-digit-number is " + total);
+	}
+}
+
+
+29. Write a Java program to print the ascii value of a given character.
+
+ Expected Output
+The ASCII value of Z is :90
+
+import java.util.Scanner;
+public class HelloWorld{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        String a = sc.nextLine();
+        char c=a.charAt(0);
+        int f = c;
+        System.out.println("The ASCII value of the character is "+f);
+    }
+}
+
+
+
+30. Write a Java program to input and display your password.
+
+Expected Output
+Input your Password:                                                    
+Your password was: abc@123
+
+import java.util.Scanner;
+public class HelloWorld {
+    public static void main(String[] args)
+    {
+        System.out.println("Enter the Password ");
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        System.out.println("Your Password is : "+s);
+    }
+}
