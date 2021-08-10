@@ -1,0 +1,303 @@
+ DAY 5 
+
+41. Write a Java program that accepts three integers from the user and return true if two or more of them (integers ) have the same rightmost digit. The integers are non-negative. 
+Sample Output:
+Input the first number : 5                                             
+Input the second number: 10                                            
+Input the third number : 15                                            
+The result is: true
+
+
+import java.util.Scanner;
+public class HelloWorld{
+
+     public static void main(String []args){
+         
+        System.out.println("Enter three integers");
+        Scanner sc = new Scanner(System.in);
+        int t1 = sc.nextInt()%10;
+        int t2 = sc.nextInt()%10;
+        int t3 = sc.nextInt()%10;
+        
+        
+        if( t1 == t2 || t2 == t3 || t3 == t1 )
+        {
+            System.out.print("True");
+        }
+        else
+        {
+            System.out.print("False");
+        }
+     }
+}
+
+
+42. Write a Java program to convert seconds to hour, minute and seconds.
+Sample Output:
+Input seconds: 86399                                                   
+23:59:59
+
+import java.util.Scanner;
+public class HelloWorld{
+
+     public static void main(String []args){
+         
+        System.out.println("Enter the numbers of seconds");
+        Scanner sc = new Scanner(System.in);
+        int total = sc.nextInt();
+        
+        int temp = total/60;
+        int sec = total-temp*60;
+        int total_hrs = temp/60;
+        int hrs = total%24;
+        int min = temp - total_hrs*60 ;
+        
+        System.out.format("The final required time is : %d : %d : %d ",hrs,min,sec);
+        
+     }
+}
+
+43. Write a Java program to find the number of integers within the range of two specified numbers and that are divisible by another number.
+For example x = 5, y=20 and p =3, find the number of integers within the range x..y and that are divisible by p i.e. { i :x = i = y, i mod p = 0 }
+Sample Output:
+5
+
+import java.util.Scanner;
+public class HelloWorld{
+
+     public static void main(String []args){
+         
+        System.out.println("Enter the bottom or top range ");
+        Scanner sc = new Scanner(System.in);
+        int r1 = sc.nextInt();
+        int r2 = sc.nextInt();
+        System.out.println("Enter the divisor number");
+        int p = sc.nextInt();
+        for( int i=r1 ; i<=r2 ; i++)
+        {
+            if(i%p==0)
+            {
+                System.out.println(i);
+            }
+        }
+        
+     }
+}
+
+
+44. Write a Java program to accepts an integer and count the factors of the number. 
+Sample Output:
+Input an integer: 25                                                   
+3
+
+import java.util.*;
+public class HelloWorld{
+
+     public static void main(String []args){
+         
+        System.out.println("Enter the integer to be find the no. of divisors ");
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int ctr = 0;
+        for(int i=1; i<=(int)Math.sqrt(num); i++) 
+        {
+            if(num%i==0 && i*i!=num) 
+            {
+                ctr+=2;
+            } 
+            
+            else if (i*i==num) 
+            {
+                ctr++;
+            }
+        }
+        System.out.println("The total number of divisors is: "+ ctr);
+        
+     }
+}
+	
+
+45. Write a Java program to capitalize the first letter of each word in a sentence. 
+Sample Output:
+Input a Sentence: the quick brown fox jumps over the lazy dog.         
+The Quick Brown Fox Jumps Over The Lazy Dog.
+
+
+import java.util.*;
+public class HelloWorld{
+
+     public static void main(String []args){
+         
+        System.out.println("Enter the required string ");
+        Scanner input = new Scanner(System.in);
+        String line = input.nextLine();
+        String final_string =" ";
+        Scanner lineScan = new Scanner(line);
+        while(lineScan.hasNext())
+        {
+            String word = lineScan.next();
+            final_string += Character.toUpperCase(word.charAt(0))+word.substring(1)+" ";
+            
+        }
+        System.out.println(final_string.trim());
+        
+      
+        
+     }
+}
+
+
+46. Write a Java program to convert a given string into lowercase.
+Sample Output:
+Input a String: THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.           
+the quick brown fox jumps over the lazy dog.
+
+import java.util.Scanner;
+public class HelloWorld
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        System.out.println("The required string is : \n"+str.toLowerCase());
+    }
+}
+
+
+47. Write a Java program to find the penultimate (next to last) word of a sentence.
+Sample Output:
+Input a String: The quick brown fox jumps over the lazy dog.
+Penultimate word: lazy
+
+
+
+import java.util.*;
+public class HelloWorld
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        String[] word = str.split("[ ]+");
+        System.out.println("The Penultimate is : \n"+word[word.length-2]);
+        
+    }
+}
+
+
+
+48. Write a Java program to reverse a word. 
+Sample Output:
+Input a word: dsaf
+Reverse word: fasd
+
+
+
+import java.util.Scanner;
+public class HelloWorld
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        String rev_str = "";
+        for(int i=str.length()-1; i>=0; i--)
+        {
+            rev_str += str.charAt(i);
+        }
+        System.out.println("The required string is : \n"+rev_str);
+    }
+}
+
+
+49. Write a Java program that accepts three integer values and return true if one of them is 20 or more and less than the substractions of others. 
+Sample Output:
+Input the first number : 15                                            
+Input the second number: 20                                            
+Input the third number : 25                                            
+false
+
+
+import java.util.*;
+public class HelloWorld{
+
+     public static void main(String []args){
+         
+        System.out.println("Enter three integers");
+        Scanner sc = new Scanner(System.in);
+        int t1 = sc.nextInt();
+        int t2 = sc.nextInt();
+        int t3 = sc.nextInt();
+        
+        
+        if( t1>=20 || t2>=20 || t3>=20)
+        {
+            System.out.print("True");
+        }
+        if(Math.abs(t2-t1)>t3 || Math.abs(t2-t3)>t1 || Math.abs(t1-t3)>t2)
+        {
+            System.out.print("True");
+        }
+     }
+}
+
+
+
+50. Write a Java program that accepts two integer values from the user and return the larger values. However if the two values are the same, return 0 and return the smaller value if the two values have the same remainder when divided by 6.
+Sample Output:
+Input the first number : 12                                            
+Input the second number: 13                                            
+Result: 13
+
+
+
+
+import java.util.*;
+public class HelloWorld{
+
+     public static void main(String []args){
+         
+        System.out.println("Enter three integers");
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        
+        if(a>b)
+        {
+            System.out.println("The larger value is "+a);
+        }
+        else if( b>a)
+        {
+            System.out.println("The larger value is "+b);
+        }
+        else
+        {
+            System.out.println("Two values are same = 0 ");
+        }
+        
+        if ( a%6 == b%6)
+        {
+            if(a<b)
+            {
+                System.out.println("The smaller value is "+a+" becox both digit have same reminder");
+                
+            }
+            else if(a>b)
+            {
+                System.out.println("The smaller value is " +b+ " becox both digit have same reminder");
+                
+            }
+        }
+     }
+}
+
+
+
+
+
+
+
+
+
+
+
