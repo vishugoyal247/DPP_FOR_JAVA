@@ -1,0 +1,300 @@
+‼️Day 6‼️
+
+51.Write a Java program that accepts two integer values between 25 to 75 and return true if there is a common digit in both numbers.
+Sample Output:
+
+Input the first number : 35                                            
+Input the second number: 45                                            
+Result: true
+
+
+import java.util.Scanner;
+public class HelloWorld{
+
+     public static void main(String []args){
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int a1 = a%10;
+        int a2 = a/10;
+        
+        int b1 = b%10;
+        int b2 = b/10;
+        
+        if( a1==b1 || a1==b2 || a2==b1 || a2==b2)
+        {
+            System.out.print("true");
+        }
+        
+     }
+}
+
+
+52.Write a Java program to calculate the modules of two numbers without using any inbuilt modulus operator.
+Sample Output:
+
+Input the first number : 19                                            
+Input the second number: 7                                             
+5   
+
+
+import java.util.Scanner;
+public class HelloWorld{
+
+     public static void main(String []args){
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        
+        int rem = a - (a/b)*b;
+        System.out.println("The reminder of the value is :"+ rem );
+        
+     }
+}
+
+
+
+
+53.Write a Java program to compute the sum of the first 100 prime numbers. 
+Sample Output:
+
+Sum of the first 100 prime numbers
+
+
+
+import java.util.*;
+public class HelloWorld{
+
+     public static void main(String []args){
+        Scanner sc = new Scanner(System.in);
+        int count = 1;
+        int num =0;
+        int j=0;
+        while(count !=101)
+        {
+            
+            num++;
+            int flag =0;
+            for(int i=1; i<=num/2; i++)
+            {
+                if(num%i==0)
+                {
+                    flag+=1;
+                    
+                }
+            }
+            if(flag==1)
+            {
+                j++;
+                count+=1;
+                System.out.println(j+" Prime number is  "+num);
+                
+            }
+        }
+        
+        
+        
+     }
+}
+
+
+
+
+
+54.Write a Java program to insert a word in the middle of the another string.
+Insert "Tutorial" in the middle of "Python 3.0", so result will be Python Tutorial 3.0
+Sample Output:
+
+Python Tutorial 3.0
+
+
+
+
+public class HelloWorld{
+
+     public static void main(String []args)
+     {
+        String main_string = "Python 3.0";
+        String word = "Tutorial";
+        System.out.println(main_string.substring(0, 7) + word + main_string.substring(6));
+        
+        
+        
+        
+     }
+}
+
+
+
+
+
+
+55.Write a Java program to create a new string of 4 copies of the last 3 characters of the original string. The length of the original string must be 3 and above.
+Sample Output:
+
+3.03.03.03.0 
+
+
+
+public class HelloWorld
+{
+    public static void main(String[] args)
+    {
+        String str = "Python 3.0";
+      
+        String last_three_chars = str.substring(str.length() - 3);
+        System.out.println(last_three_chars + last_three_chars + last_three_chars + last_three_chars);
+    }
+}
+
+
+
+
+
+
+56.Write a Java program to extract the first half of a string of even length.
+Test Data: Python
+Sample Output:
+Pyt
+
+import java.util.Scanner;
+public class HelloWorld{
+    public static void main(String[]  args)
+    {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        System.out.println(str.substring(0, str.length()/2));
+    }
+}
+
+
+
+
+
+57.Write a Java program to create a string in the form short_string + long_string + short_string from two strings. The strings must not have the same length.
+Test Data: Str1 = Python
+Str2 = Tutorial
+Sample Output:
+
+PythonTutorialPython
+
+
+import java.util.Scanner;
+public class HelloWorld{
+    public static void main(String[]  args)
+    {
+        Scanner sc = new Scanner(System.in);
+        String short_str = sc.nextLine();
+        String long_str = sc.nextLine();
+        System.out.println(short_str+long_str+short_str);
+    }
+}
+
+
+
+
+
+
+
+58.Write a Java program to create the concatenation of the two strings except removing the first character of each string. The length of the strings must be 1 and above. 
+Test Data: Str1 = Python
+Str2 = Tutorial
+Sample Output:
+
+ythonutorial
+
+
+import java.util.Scanner;
+public class HelloWorld{
+    public static void main(String[]  args)
+    {
+        Scanner sc = new Scanner(System.in);
+        String short_str = sc.nextLine();
+        String long_str = sc.nextLine();
+        System.out.println(short_str.substring(1)+long_str.substring(1));
+    }
+}
+
+
+
+
+59.Write a Java program to create a new string taking first three characters from a given string. If the length of the given string is less than 3 use "#" as substitute characters. 
+Test Data: Str1 = " "
+Sample Output:
+
+###
+
+
+
+import java.util.Scanner;
+public class HelloWorld{
+    public static void main(String[]  args)
+    {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        if(str.length()<3)
+        {
+            System.out.println("###");
+        }
+        else{
+            System.out.println(str.substring(0,3));
+            
+        }
+        
+    }
+}
+
+
+60.Write a Java program to create a new string taking first and last characters from two given strings. If the length of either string is 0 use "#" for missing character.
+Test Data: str1 = "Python"
+str2 = " "
+Sample Output:
+
+P#
+
+
+
+import java.util.Scanner;
+public class HelloWorld{
+
+     public static void main(String []args)
+     {
+        Scanner sc = new Scanner(System.in);
+        String str1 = sc.next();
+        String str2 = sc.next();
+        String str = "";
+        
+        str = str + str1.substring(0,1);
+        if(str2.length()>0)
+        {
+            str =str + str2.substring(str2.length()-2);
+        }
+        else
+        {
+            str =str + "#";
+        }
+        System.out.println(str);
+        
+     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
