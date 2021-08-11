@@ -8,6 +8,7 @@ Input the second number: 45
 Result: true
 
 
+
 import java.util.Scanner;
 public class HelloWorld{
 
