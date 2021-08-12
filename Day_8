@@ -1,0 +1,442 @@
+71. Write a Java program to get a number from the user and print whether it is positive or negative. 
+
+Test Data
+Input number: 35
+Expected Output :
+Number is positive
+
+
+import java.util.Scanner;
+public class HelloWorld{
+
+     public static void main(String []args){
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        if(num>=0)
+        {
+            System.out.in("positive");
+        }
+        else
+        {
+            System.out.in("negative");
+        }
+     }
+}
+
+
+
+72. Write a Java program to solve quadratic equations (use if, else if and else).
+
+Test Data
+Input a: 1
+Input b: 5
+Input c: 1
+Expected Output :
+The roots are -0.20871215252208009 and -4.7912878474779195
+
+
+import java.util.*;
+public class HelloWorld{
+
+     public static void main(String []args){
+         Scanner sc = new Scanner(System.in);
+         System.out.print("Input a: ");
+            double a = sc.nextDouble();
+            System.out.print("Input b: ");
+            double b = sc.nextDouble();
+            System.out.print("Input c: ");
+            double c = sc.nextDouble();
+
+            double result = b * b - 4.0 * a * c;
+
+            if (result > 0.0) {
+                double r1 = (-b + Math.pow(result, 0.5)) / (2.0 * a);
+                double r2 = (-b - Math.pow(result, 0.5)) / (2.0 * a);
+                System.out.println("The roots are " + r1 + " and " + r2);
+            } else if (result == 0.0) {
+                double r1 = -b / (2.0 * a);
+                System.out.println("The root is " + r1);
+            } else {
+                System.out.println("The equation has no real roots.");
+            }
+         
+        
+     }
+}
+
+
+
+73. Take three numbers from the user and print the greatest number. 
+
+Test Data
+Input the 1st number: 25
+Input the 2nd number: 78
+Input the 3rd number: 87
+Expected Output :
+The greatest: 87
+
+
+import java.util.*;
+public class HelloWorld{
+
+     public static void main(String []args){
+         Scanner sc = new Scanner(System.in);
+         System.out.print("Input a: ");
+            double a = sc.nextDouble();
+            System.out.print("Input b: ");
+            double b = sc.nextDouble();
+            System.out.print("Input c: ");
+            double c = sc.nextDouble();
+
+            
+
+            if (a>b && a>c)
+            {
+                System.out.println("The largest digit is "+a);
+            } 
+            
+            else if (b>a && b>c) 
+            {
+                System.out.println("The largest digit is "+b);
+            } 
+            
+            else 
+            {
+                System.out.println("The largest digit is "+c);
+            }
+         
+        
+     }
+}
+
+
+74. Write a Java program that reads a floating-point number and prints "zero" if the number is zero. Otherwise, print "positive" or "negative". Add "small" if the absolute value of the number is less than 1, or "large" if it exceeds 1,000,000. 
+
+Test Data
+Input a number: 25
+Expected Output :
+Input value: 25
+Positive number
+
+
+
+import java.util.*;
+public class HelloWorld{
+
+     public static void main(String []args){
+         Scanner sc = new Scanner(System.in);
+         System.out.print("Input a: ");
+            double a = sc.nextDouble();
+            
+
+            
+
+            if (a==0)
+            {
+                System.out.println("Zero");
+            } 
+            else if(a>0)
+            {
+                System.out.println("Positive");
+            }
+            else{
+                System.out.println("Negative");
+            }
+            
+            if (-1<a && a<1) 
+            {
+                System.out.println("small");
+            } 
+            
+            else if(-1_000_000<a && a<1_000_000)
+            {
+                System.out.println("large");
+            }
+         
+        
+     }
+}
+
+
+
+
+
+75. Write a Java program that keeps a number from the user and generates an integer between 1 and 7 and displays the name of the weekday. 
+
+Test Data
+Input number: 3
+Expected Output :
+Wednesday
+
+
+import java.util.*;
+public class HelloWorld{
+
+     public static void main(String []args){
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Input a: ");
+            int a = sc.nextInt();
+            
+            
+
+            if (a == 7)
+            {
+                System.out.println("Sunday");
+            } 
+            
+            else if (a == 1) 
+            {
+                System.out.println("Monday");
+            }
+            else if (a == 2) 
+            {
+                System.out.println("Tuesday");
+            } 
+            else if (a == 3) 
+            {
+                System.out.println("Wednesday");
+            } 
+            else if (a == 4) 
+            {
+                System.out.println("Thursday");
+            } 
+            else if (a == 5) 
+            {
+                System.out.println("Friday");
+            } 
+            else if (a == 6) 
+            {
+                System.out.println("Saturday");
+            } 
+            
+            else 
+            {
+                System.out.println("Undefined weeknumber");
+            }
+         
+        
+     }
+}
+
+
+
+
+
+76. Write a Java program that reads in two floating-point numbers and tests whether they are the same up to three decimal places. 
+
+Test Data
+Input floating-point number: 25.586
+Input floating-point another number: 25.589
+Expected Output :
+They are different
+
+
+import java.util.*;
+public class HelloWorld
+{
+
+        public static void main(String []args)
+        {
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Input a: ");
+            float x = sc.nextFloat();
+            float y = sc.nextFloat();            
+            
+
+            x = Math.round(x * 1000);
+            x = x / 1000;
+
+            y = Math.round(y * 1000);
+            y = y / 1000;
+
+            if (x == y)
+            {
+                System.out.println("They are the same up to three decimal places");
+            }
+            else
+            {
+                System.out.println("They are different");
+            }
+        
+        }
+}
+
+
+
+77. Write a Java program to find the number of days in a month.
+
+Test Data
+Input a month number: 2
+Input a year: 2016
+Expected Output :
+February 2016 has 29 days
+
+
+import java.util.Scanner;
+public class HelloWorld{
+    
+
+    public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Input the year: ");
+        int year = in.nextInt();
+        System.out.println("Input the month number: ");
+        int month = in.nextInt();
+        System.out.println();
+        boolean x = (year % 4) == 0;
+        boolean y = (year % 100) != 0;
+        boolean z = ((year % 100 == 0) && (year % 400 == 0));
+        
+        if(month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12)
+        {
+            System.out.format("%d and month no. %d has 31", year,month);
+        }
+        else if(month == 2)
+        {
+            if (x && (y || z))
+            {
+                System.out.format("%d and month no. %d has 29", year,month);
+            }
+            else
+            {
+                System.out.format("%d and month no. %d has 28", year,month);
+            }
+            
+        }
+        else
+        {
+                System.out.format("%d and month no. %d has 30", year,month);
+            
+        }
+
+
+
+        
+    }
+}
+
+
+
+
+78. Write a Java program that takes the user to provide a single character from the alphabet. Print Vowel or Consonant, depending on the user input. If the user input is not a letter (between a and z or A and Z), or is a string of length > 1, print an error message. 
+
+
+
+Test Data
+Input an alphabet: p
+Expected Output :
+Input letter is Consonant
+
+
+
+
+
+import java.util.Scanner;
+public class HelloWorld
+{
+    
+
+    public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Input an alphabet: ");
+        String input = in.next().toLowerCase();
+
+        boolean uppercase = input.charAt(0) >= 65 && input.charAt(0) <= 90;
+        boolean lowercase = input.charAt(0) >= 97 && input.charAt(0) <= 122;
+        boolean vowels = input.equals("a") || input.equals("e") || input.equals("i")
+                || input.equals("o") || input.equals("u");
+
+        if (input.length() > 1)
+        {
+            System.out.println("Error. Not a single character.");
+        }
+        else if (!(uppercase || lowercase))
+        {
+            System.out.println("Error. Not a letter. Enter uppercase or lowercase letter.");
+        }
+        else if (vowels)
+        {
+            System.out.println("Input letter is Vowel");
+        }
+        else
+        {
+            System.out.println("Input letter is Consonant");
+        }
+    }
+}
+
+
+
+
+
+
+79. Write a Java program that takes a year from user and print whether that year is a leap year or not. 
+
+Test Data
+Input the year: 2016
+Expected Output :
+2016 is a leap year
+
+
+public class HelloWorld{
+    
+
+    public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Input the year: ");
+        int year = in.nextInt();
+
+        boolean x = (year % 4) == 0;
+        boolean y = (year % 100) != 0;
+        boolean z = ((year % 100 == 0) && (year % 400 == 0));
+
+        if (x && (y || z))
+        {
+            System.out.println(year + " is a leap year");
+        }
+        else
+        {
+            System.out.println(year + " is not a leap year");
+        }
+    }
+}
+
+
+
+
+
+80. Write a program in Java to display the first 10 natural numbers. 
+
+Expected Output :
+
+The first 10 natural numbers are:                                                
+                                                                                 
+1                                                                                
+2                                                                                
+3                                                                                
+4                                                                                
+5                                                                                
+6                                                                                
+7                                                                                
+8                                                                                
+9                                                                                
+10
+
+public class HelloWorld
+{
+
+        public static void main(String []args)
+        {
+            for(int i =1; i<11; i++)
+            {
+                System.out.println(i);
+            }
+        
+        }
+}
