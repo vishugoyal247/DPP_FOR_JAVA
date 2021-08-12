@@ -1,0 +1,272 @@
+61. Write a Java program to convert temperature from Fahrenheit to Celsius degree.
+Test Data
+Input a degree in Fahrenheit: 212
+Expected Output:
+212.0 degree Fahrenheit is equal to 100.0 in Celsius
+
+
+
+import java.util.Scanner;
+public class HelloWorld 
+{
+    public static void main(String[] args) 
+    {
+
+        Scanner sc = new Scanner(System.in);
+        double f=sc.nextDouble();
+        double c =(f-32.0)*5/9.0;
+        System.out.format("%f degree Fahrenheit is equal to %f in Celsius",f,c);
+        
+
+    }
+}
+
+62. Write a Java program that reads a number in inches, converts it to meters.
+        Note: One inch is 0.0254 meter.
+       Test Data
+Input a value for inch: 1000
+Expected Output :
+1000.0 inch is 25.4 meters
+ 
+ 
+        
+import java.util.Scanner;
+public class HelloWorld 
+{
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        double inch = sc.nextDouble();
+        double meter=inch*0.0254;
+        System.out.format("%2f inch is %2f meters",inch,meter); 
+        
+        
+    }
+}
+        
+        
+        
+
+63. Write a Java program that reads an integer between 0 and 1000 and adds all the digits in the integer.
+Test Data
+Input an integer between 0 and 1000: 565
+Expected Output :
+The sum of all digits in 565 is 16
+
+import java.util.Scanner;
+public class HelloWorld 
+{
+    public static void main(String[] args) 
+    {
+       
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int sum =0;
+        int temp;
+        while(n!=0)
+        {
+            temp=n%10;
+            sum=sum+temp;
+            n=n/10;
+        }
+        System.out.println("The sum of all digits in "+n+" is "+sum);
+    }
+}
+
+
+
+64. Write a Java program to convert minutes into a number of years and days.
+
+Test Data
+Input the number of minutes: 3456789
+Expected Output :
+3456789 minutes is approximately 6 years and 210 days
+
+
+import java.util.Scanner;
+public class HelloWorld 
+{
+    public static void main(String[] args) 
+    {
+       
+        Scanner sc = new Scanner(System.in);
+        long min = sc.nextLong();
+        long years = min / (60*24*365);
+        long days= (min/60/24)%365;
+        System.out.format("%o minutes is approximately %o years and %o days",min,years,days);
+    }
+}
+
+
+65. Write a Java program that prints the current time in GMT. 
+Test Data
+Input the time zone offset to GMT: 256
+Expected Output:
+Current time is 23:40:24
+
+
+Try at your own level. explore by yourself if you want to do that..
+
+
+
+66. Write a Java program to compute body mass index (BMI).
+
+        Test Data
+Input weight in pounds: 452
+Input height in inches: 72
+Expected Output:
+Body Mass Index is 61.30159143458721
+
+
+
+import java.util.Scanner;
+public class HelloWorld 
+{
+    public static void main(String[] args) 
+    {
+       
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter weight in pounds");
+        int w=sc.nextInt();
+        System.out.println("Enter height in inches");
+        int h =sc.nextInt();
+        double weights=w*0.453592;
+        double height=h*0.0254;
+        double bmi =weights/(height*height);
+        System.out.println("Body Mass Index is "+bmi); 
+    }
+}
+
+67. Write a Java program to takes the user for a distance (in meters) and the time was taken (as three numbers: hours, minutes, seconds), and display the speed, in meters per second, kilometers per hour and miles per hour (hint: 1 mile = 1609 meters).
+
+Test Data
+Input distance in meters: 2500
+Input hour: 5
+Input minutes: 56
+Input seconds: 23
+Expected Output :
+Your speed in meters/second is 0.11691531
+Your speed in km/h is 0.42089513
+Your speed in miles/h is 0.26158804
+
+import java.util.Scanner;
+public class HelloWorld 
+{
+    public static void main(String[] args) 
+    {
+       
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Input distance in meters:");
+        int d=sc.nextInt();
+        int h=sc.nextInt();
+        int m=sc.nextInt();
+        int s=sc.nextInt();
+        int s1=d/s;
+        double km=m*0.001;
+        double s2=km/h;
+        double mile=m*0.000621371;
+        double s3=mile/h;
+        System.out.println(s1);
+        System.out.println(s2);
+        System.out.println(s3); 
+    }
+}
+
+
+
+68. Write a Java program that reads a number and display the square, cube, and fourth power. 
+
+input a number:
+3
+
+Expected Output:
+Square: 9 
+cube: 27
+Fourth power: 81
+
+import java.util.Scanner;
+public class HelloWorld{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.println("Square : "+n*n);
+        System.out.println("cube : "+n*n);
+        System.out.println("Forth power : "+n*n);
+
+    }
+}
+
+
+
+69. Write a Java program that accepts two integers from the user and then prints the sum, the difference, the product, the average, the distance (the difference between integer), the maximum (the larger of the two integers), the minimum (smaller of the two integers).
+
+        Test Data
+Input 1st integer: 25
+Input 2nd integer: 5
+Expected Output :
+Sum of two integers: 30
+Difference of two integers: 20
+Product of two integers: 125
+Average of two integers: 15.00
+Distance of two integers: 20
+Max integer: 25
+Min integer: 5
+
+
+
+import java.util.Scanner;
+public class HelloWorld 
+{
+    public static void main(String[] args) 
+    {
+       
+        Scanner sc = new Scanner(System.in);
+        int n=sc.nextInt();
+        int m=sc.nextInt();
+        int sum=n+m;
+        int dif=n-m;
+        System.out.println("sum of two integers "+sum);
+        System.out.println("difference of two integers "+dif);
+        System.out.println("product of two integers "+n*m);
+        System.out.println("average of two integers "+sum/2);
+        System.out.println("distance of two integers "+dif);
+        if (n>m)
+            System.out.println("Max integer "+n);
+        else if (m>n)
+            System.out.println("MIN integer"+m);
+        else
+            System.out.println("equal");  
+
+    }
+}
+
+70. Write a Java program to break an integer into a sequence of individual digits. 
+
+Test Data
+Input six non-negative digits: 123456
+Expected Output :
+1 2 3 4 5 6
+
+
+import java.util.Scanner;
+public class HelloWorld {
+
+    public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Input six non-negative digits: ");
+        int input = in.nextInt();
+        int n1 = input / 100000 % 10;
+        int n2 = input / 10000 % 10;
+        int n3 = input / 1000 % 10;
+        int n4 = input / 100 % 10;
+        int n5 = input / 10 % 10;
+        int n6 = input % 10;
+      System.out.println(n1 + " " + n2 + " " + n3 + " " + n4 + " " + n5 + " " + n6);
+
+    }
+}
+
+
